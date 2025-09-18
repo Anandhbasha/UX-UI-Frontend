@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 .head{
     background-color: purple;
@@ -8,7 +8,7 @@
     font-weight: 400;
     font-family: "Poppins", sans-serif;
     text-transform: capitalize;
-    /* text-decoration: line-through; */
+    text-decoration: line-through;
     text-shadow:.5px 1px yellow;
     letter-spacing: 3px;
     
@@ -17,7 +17,7 @@
     line-height: 50px;
 }
 
-/* margin & padding */
+margin & padding
 *{
     margin: 0;
     padding: 0;
@@ -25,15 +25,96 @@
 }
 
 .head{
-    /* margin-top: 100px;
+     margin-top: 100px;
     margin-left: 100px;
     margin-right: 100px;
-    margin-bottom: 100px; */
-    margin: 100px 50px 100px 50px;
-    padding: 100px 50px 100px 50px;
-    border-radius: 50px 15px 10px 5px;
-    /* border-width: 5px;
+    margin-bottom: 100px; 
+    margin: 100px 50px 100px 50px; 
+     padding: 100px 50px 100px 50px;
+    border-radius: 50px 15px 10px 5px; 
+    border-width: 5px;
     border-color: black;
-    border-style:solid ; */
+    border-style:solid ;
     border: 5px dotted red;
+}
+.head{
+    width: 100%;
+    height: 10vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.mainBox{
+    background-color: red;
+    height: 40vh;
+    width: 30vw;
+    background: linear-gradient(#008000a3, #1a0000a8, #7373a0e6),url('./Images/download.jpeg'),no-repeat;
+    background-image: url('./Images/download.jpeg'); 
+    background-repeat: no-repeat; 
+    background-size: cover;
+    text-align: center;
+    color: white;
+    background-position: 250px;    
+}
+
+positions
+static
+fixed
+sticky
+absolute
+relative
+
+.box1{
+    position: sticky;
+    top: 10px;
+    left: 0;
+}
+.boxes{
+    position: relative;
+    width: 200px;
+    height: 200px;
+    background-color: red;
+    border: 1px solid red;
+    margin: 100px;
+    float: bottom;
+    transition: 3s ease;
+
+}
+.box1{
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    width: 100px;
+    height: 100px;
+    background-color: black;
+}
+
+.boxes:hover{
+    background-color: black;
+    transition: 3s ease;
+    transform: translateX(10px);
+    transform: translateY(50px);
+    transform: scale(1.2);
+    transform: rotate(45deg);
+} */
+
+.box{
+    height: 300px;
+    width: 400px;
+    background-color: peru;
+    /* margin-right: 5px; */
+}
+.boxes{
+    height: 100vh;
+    display: flex;
+    gap: 5px;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+}
+.box1{
+    /* flex-basis: 500px; */
+    /* flex-shrink: 0; */
+    flex-grow: 2;
 }

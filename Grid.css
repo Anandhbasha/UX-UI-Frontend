@@ -1,0 +1,70 @@
+/* .box{
+    background-color: red;
+} */
+.boxes{
+    /* display: grid; */
+    /* gap: 5px; */
+    /* grid-template-columns: repeat(3,250px); */
+    /* grid-template-columns: repeat(3,1fr); */
+    /* grid-template-columns: repeat(3,minmax(250px,1fr)); */
+    /* grid-template-columns: repeat(auto-fill,minmax(250px,1fr)); */
+    /* grid-template-rows: 300px 300px 300px; */
+}
+
+/* .grid{
+    display: grid;
+    height: 100vh;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(3,1fr);
+}
+.first,.second,.sixth{
+    background-color: green;
+}
+.third,.fifth,.seventh{
+    background-color: red;
+}
+.fourth,.eighth{
+    background-color: yellow;
+}
+
+.first{
+    grid-row: span 3;
+}
+.second{
+    grid-column: span 2;
+}
+.sixth{
+    grid-row: span 2;
+} */
+
+
+.grid{
+    height: 100vh;
+    display: grid;
+    grid-template-areas: 
+    "f s s t"
+    "f fo fi si"
+    "f se ei si";
+}
+.first,.second,.sixth{
+    background-color: green;
+}
+.third,.fifth,.seventh{
+    background-color: red;
+}
+.fourth,.eighth{
+    background-color: yellow;
+}
+
+.first{
+    grid-area: f;
+}
+.second{
+    grid-area: s;
+}
+.third{
+    grid-area: t;
+}
+.sixth{
+    grid-area: si;
+}

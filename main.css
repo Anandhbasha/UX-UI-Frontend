@@ -17,6 +17,7 @@
     left: 0;
     height: 10vh;
     background-color: plum;
+    opacity: .8;
     z-index: 1;
     margin: 0 auto;
 }
@@ -66,4 +67,72 @@ a{
 }
 .rightSide{
     width: 45%;
+}
+
+.nav a {
+  position: relative;
+  text-decoration: none;
+  color: #000; 
+  padding: 20px 45px; 
+  font-weight: 500;
+}
+
+.nav a::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0px;
+  width: 0;
+  height: 4px; 
+  background: #ee2a07;
+  transition: width 0.3s ease;
+}
+
+.nav a:hover::before {
+  width: 100%;
+}
+
+
+.nav{
+    animation: bgChange 4s ease infinite ;
+}
+
+@keyframes bgChange{
+    0%{
+        background-color: black;
+    }
+    25%{
+        background-color: red;
+    }
+    50%{
+        background-color: purple;
+    }
+    100%{
+        background-color: peachpuff;
+    }
+}
+
+@media screen and (max-width:700px) {
+    .mainContent{
+        /* display: none; */
+        flex-direction: column;
+    }    
+}
+
+.box{
+    width: 200px;
+    height: 200px;
+    background-color: red;
+    
+}
+.boxes{
+    display: flex;
+    gap: 5px;
+}
+/* .box:last-child{
+    background-color: purple;
+} */
+
+.box:nth-child(5){
+    background-color: purple;
 }

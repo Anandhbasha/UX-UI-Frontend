@@ -283,107 +283,223 @@
 // // foreach
 // // arr.forEach((x)=>console.log(x))
 
-// // array methods
-// // MRF
-// // Map
-// // arr.map((x)=>console.log(x))
-// // // reduce
-// // let total = arr.reduce((x,y)=>x*y) //x=0,y=10 // 2:x=10,y=20 //x=30 y= 13
-// // console.log(total);
+// // // array methods
+// // // MRF
+// // // Map
+// // // arr.map((x)=>console.log(x))
+// // // // reduce
+// // // let total = arr.reduce((x,y)=>x*y) //x=0,y=10 // 2:x=10,y=20 //x=30 y= 13
+// // // console.log(total);
 
-// // // filter
-// // console.log(arr.filter((x)=>x%2==0));
+// // // // filter
+// // // console.log(arr.filter((x)=>x%2==0));
 
-// // array methods
-// // pop
-let newArray = [100,22,55,1,9,77,88]
-newArray.pop()
-console.log(newArray);
-
-// push
-newArray.push(105)
-console.log(newArray);
-
-// shift
-newArray.shift()
-console.log(newArray);
-
-// unshift
-newArray.unshift(203)
-console.log(newArray);
-
-// slice
-console.log(newArray.slice(0,3));
-
-// newArray[3] = 500
+// // // array methods
+// // // pop
+// let newArray = [100,22,55,1,9,77,88]
+// newArray.pop()
 // console.log(newArray);
 
-// splice
-newArray.splice(3,0,500)
-console.log(newArray);
+// // push
+// newArray.push(105)
+// console.log(newArray);
 
-// indexOf
-console.log(newArray.indexOf(50));
+// // shift
+// newArray.shift()
+// console.log(newArray);
 
-// includes
-console.log(newArray.includes(55));
+// // unshift
+// newArray.unshift(203)
+// console.log(newArray);
 
-// find
-let finds = newArray.find((x)=>x==50)
-console.log(finds);
+// // slice
+// console.log(newArray.slice(0,3));
 
-// sort
-let names = ["bala","arun","aadhi"]
-console.log(names.sort());
-console.log(newArray.sort());
+// // newArray[3] = 500
+// // console.log(newArray);
 
-// split
-let newNames = "lal-prasath"
-let values = newNames.split("-")
-console.log(values);
+// // splice
+// newArray.splice(3,0,500)
+// console.log(newArray);
 
-// spread
-let spreads1 = [names,newArray]
-console.log(spreads1);
-let spreads = [...names,...newArray]
-console.log(spreads);
+// // indexOf
+// console.log(newArray.indexOf(50));
+
+// // includes
+// console.log(newArray.includes(55));
+
+// // find
+// let finds = newArray.find((x)=>x==50)
+// console.log(finds);
+
+// // sort
+// let names = ["bala","arun","aadhi"]
+// console.log(names.sort());
+// console.log(newArray.sort());
+
+// // split
+// let newNames = "lal-prasath"
+// let values = newNames.split("-")
+// console.log(values);
+
+// // spread
+// let spreads1 = [names,newArray]
+// console.log(spreads1);
+// let spreads = [...names,...newArray]
+// console.log(spreads);
 
 
 
-// rest
-// destructure
-let [first,second,...a] = spreads
-console.log(first);
-console.log(second);
-console.log(a);
+// // rest
+// // destructure
+// let [first,second,...a] = spreads
+// console.log(first);
+// console.log(second);
+// console.log(a);
 
-let newUser = {
-    firstName:"Arun",
-    secondName:"Venkadachalam",
-    city:"CBE",
-    Education:"Mster of Engineering"
+// let newUser = {
+//     firstName:"Arun",
+//     secondName:"Venkadachalam",
+//     city:"CBE",
+//     Education:"Mster of Engineering"
+// }
+
+// let {firstName,secondName} = newUser
+// console.log("His First Name is:" +firstName,"His Second Name is :"+secondName);
+
+
+// // template literlas
+
+// console.log(`His First Name is:${firstName} His Second Name is :${secondName}`);
+
+// // setTimeout
+// setTimeout(()=>{
+//     console.log("Settimeout is working");
+    
+// },5000)
+// // setInterval
+// setInterval(()=>{
+//     console.log("SetInterval");
+    
+// },2000)
+
+// let h1 = document.getElementById('value')
+// const add = (a,b)=>{
+//    h1.innerHTML = a+b   
+// }
+
+
+// // palindrome
+
+// userName = "racecar" //hsaka racecar
+
+// temp=""
+// for(let a=userName.length-1;a>=0;a--){
+//     temp+=userName[a]
+// }
+// console.log(userName===temp?"is Palindrome":"Not Palindrome");
+
+// promise
+// const bookTicket = new Promise((resolved,reject)=>{
+//     let success = false;
+//     if(success){
+//         resolved("Ticket Booked Succesfully Ticket price is :200")
+//     }
+//     else{
+//         reject("Unable to book the ticket")
+//     }
+// })
+
+// bookTicket.then((result)=>{console.log(result)}).catch((err)=>{console.log(err)})
+
+// all
+// any
+// race
+// allsettled
+
+// let friend1 = new Promise((resolved,reject)=>{
+//     let reached1 = false
+//     if(reached1){
+//         resolved("Reached1 Home")
+//     }else{
+//         reject("Not yet reached1")
+//     }
+// })
+// let friend2 = new Promise((resolved,reject)=>{
+//     let reached2 = false
+//     if(reached2){
+//         resolved("Reached2 Home")
+//     }else{
+//         reject("Not yet reached2")
+//     }
+// })
+// let friend3 = new Promise((resolved,reject)=>{
+//     let reached3 = true
+//     if(reached3){
+//         resolved("Reached3 Home")
+//     }else{
+//         reject("Not yet reached3")
+//     }
+// })
+// let friend4 = new Promise((resolved,reject)=>{
+//     setTimeout(()=>{
+//         let reached4 = true
+//     if(reached4){
+//         resolved("Reached4 Home")
+//     }else{
+//         reject("Not yet reached4")
+//     }
+//     },5000)
+// })
+// let friend5 = new Promise((resolved,reject)=>{
+//     setTimeout(()=>{
+//             let reached5 = false
+//         if(reached5){
+//             resolved("Reached5 Home")
+//         }else{
+//             reject("Not yet reached5")
+//         }
+//     },3000)
+// })
+
+// Promise.all([friend1,friend2,friend3,friend4,friend5]).then((result)=>{console.log(result)}).catch((err)=>{console.log(err)})
+
+// Promise.race([friend1,friend2,friend3,friend4,friend5]).then((result)=>{console.log(result)}).catch((err)=>{console.log(err)})
+
+// Promise.any([friend1,friend2,friend3,friend4,friend5]).then((result)=>{console.log(result)}).catch((err)=>{console.log(err)})
+
+
+// Promise.allSettled([friend1,friend2,friend3,friend4,friend5]).then((result)=>{console.log(result)}).catch((err)=>{console.log(err)})
+
+
+// // fetch
+// const fetchData = new Promise((resolved,reject)=>{
+//     fetch('https://jsonplaceholder.typicode.com/posts').then((res)=>{
+//         if(res.ok){
+//             resolved(res.json())
+//         }
+//         else{
+//             reject("Unbale to connect API")
+//         }
+//     })
+// })
+
+// fetchData.then((result)=>console.log(result)).catch((err)=>{console.log(err)})
+
+// async
+const fetchData = async()=>{
+    try{
+        let res  = await fetch('https://jsonplaceholder.typicode.com/po')
+        if(!res.ok){
+            throw Error("Unable to connect API")
+    }
+    let data = await res.json()
+        console.log(data);
+}
+    catch(err){
+        console.log(err);        
+    }
+    
 }
 
-let {firstName,secondName} = newUser
-console.log("His First Name is:" +firstName,"His Second Name is :"+secondName);
-
-
-// template literlas
-
-console.log(`His First Name is:${firstName} His Second Name is :${secondName}`);
-
-// setTimeout
-setTimeout(()=>{
-    console.log("Settimeout is working");
-    
-},5000)
-// setInterval
-setInterval(()=>{
-    console.log("SetInterval");
-    
-},2000)
-
-let h1 = document.getElementById('value')
-const add = (a,b)=>{
-   h1.innerHTML = a+b   
-}
+fetchData()

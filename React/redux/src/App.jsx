@@ -18,10 +18,11 @@ import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 
 const App = () => {
+  const Api = 'http://localhost:8242'
   const [product,setProduct] = useState([])
   useEffect(()=>{
     const fetchData = async()=>{
-      const res = await axios.get('https://jsonplaceholder.typicode.com/posts')
+      const res = await axios.get(Api)
       if(res){
         await setProduct(res.data)
       }

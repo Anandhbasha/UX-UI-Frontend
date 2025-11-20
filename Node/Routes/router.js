@@ -1,6 +1,6 @@
 import express from 'express'
 import { deletes, insert, read, update } from '../Controller/controller.js'
-import { loginUser, registerUser } from '../Controller/loginResiterController.js'
+import { loginUser, registerUser, verifyToken } from '../Controller/loginResiterController.js'
 
 const route = express.Router()
 
@@ -14,5 +14,8 @@ route.delete('/delete/:name',deletes)
 
 route.post('/register',registerUser)
 route.post('/login',loginUser)
+
+
+route.get('/validate',verifyToken,read)
 
 export default route
